@@ -139,3 +139,6 @@ dmypy.json
 
 # Output files
 output.*
+
+# Secretes and Config data
+db_url.sh
