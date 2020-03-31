@@ -26,6 +26,7 @@ products_query = (
         ProductModel, reviews_subquery.c.reviews_count, reviews_subquery.c.average_ratings
     )
     .outerjoin(reviews_subquery, ProductModel.id == reviews_subquery.c.product_id)
+    .limit(30)
     .all()
 )
 
