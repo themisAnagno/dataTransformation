@@ -1,7 +1,5 @@
 {
-    "executionEnvironments": [
-        {
-            "root": "dbexport"
-        }
+    "include": [
+        "."
     ]
 }

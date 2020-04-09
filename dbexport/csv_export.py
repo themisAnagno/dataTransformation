@@ -1,7 +1,8 @@
 import csv
-from models.models import ProductModel
+from dbexport.models.models import ProductModel
 
-if __name__ == "__main__":
+
+def run_export():
     # Create the CSV writer object and the csv output file
     csv_file = open("output.csv", mode="w")
     fields = ["id", "name", "level", "published", "created_on", "review_count", "avg_rating"]
@@ -18,3 +19,7 @@ if __name__ == "__main__":
 
     print("Created the CSV file")
     csv_file.close()
+
+
+if __name__ == "__main__":
+    run_export()

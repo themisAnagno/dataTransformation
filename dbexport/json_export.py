@@ -1,10 +1,10 @@
 import json
-from configdb.config_db import Session
-from models.models import ProductModel, ReviewModel
+from dbexport.configdb.config_db import Session
+from dbexport.models.models import ProductModel, ReviewModel
 from sqlalchemy.sql import func
 
 
-if __name__ == "__main__":
+def run_export():
     items = []
 
     # Create the engine and the session objects
@@ -48,3 +48,7 @@ if __name__ == "__main__":
 
     with open("output.json", mode="w") as f:
         json.dump(json_data, f)
+
+
+if __name__ == "__main__":
+    run_export()
