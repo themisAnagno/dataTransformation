@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pycodestyle = "*"
+black = "*"
 
 [packages]
 sqlalchemy = "*"
@@ -12,3 +13,6 @@ psycopg2-binary = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true

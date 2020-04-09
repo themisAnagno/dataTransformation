@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Boolean, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
-from dbexport.config_db import Session
+from configdb.config_db import Session
 
 # Create the Base class form where the table-classes will inherit
 Base = declarative_base()
