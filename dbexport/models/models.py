@@ -28,11 +28,6 @@ class ProductModel(Base):
         return results
 
     @classmethod
-    def find_published(cls):
-        results = cls.query.filter_by(published=True).all()
-        return list(results) if results else []
-
-    @classmethod
     def get_products_with_reviews(cls):
         reviews_subquery = ReviewModel.get_reviews_per_product()
         products_query = (
